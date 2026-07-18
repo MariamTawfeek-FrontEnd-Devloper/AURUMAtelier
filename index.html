@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURUM Atelier</title>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Lora"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="src/styles.css">
+
+</head>
+
+<body class="bg-[#FDFBF6] text-[#4A2B2B]">
+
+    <!-- Navbar -->
+    <nav
+        class="sticky top-0 z-50 bg-[#FDFBF6]/90 backdrop-blur-md border-b border-[#d8cfc2] px-10 py-5 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-3 cursor-pointer group">
+            <div
+                class="w-12 h-12 rounded-full border border-[#B8860B] flex items-center justify-center text-[#B8860B] text-xl font-bold transition duration-300 group-hover:bg-[#B8860B] group-hover:text-white">
+                A
+            </div>
+
+            <div>
+                <h2 class="font-serif text-2xl tracking-[0.18em]">
+                    AURUM
+                </h2>
+
+                <p class="text-[10px] uppercase tracking-[0.35em] text-gray-500">
+                    Atelier
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Links -->
+        <ul id="navbar-container" class="hidden lg:flex items-center gap-10 text-sm font-semibold tracking-widest">
+
+        </ul>
+
+        <!-- Right Side -->
+        <div class="flex items-center gap-5">
+
+            <button class="hover:text-[#C8A14B] duration-300">
+                <i class="fa-solid fa-magnifying-glass text-lg"></i>
+            </button>
+
+            <button class="hover:text-red-500 hover:scale-110 duration-300">
+                <i class="fa-regular fa-heart text-lg"></i>
+            </button>
+
+            <button class="relative hover:text-[#C8A14B] duration-300">
+
+                <i class="fa-solid fa-bag-shopping text-lg"></i>
+
+                <span id="cartCount"
+                    class="hidden absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#B8860B] text-white text-[10px] flex items-center justify-center">
+                </span>
+
+            </button>
+
+            <button
+                class="rounded-full border border-[#C8A14B] px-6 py-2.5 hover:bg-[#C8A14B] hover:text-white transition-all duration-300">
+                Sign In
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-[#FCFAF6] py-24">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <div class="grid lg:grid-cols-2 items-center gap-4">
+
+                <!-- Left Content -->
+                <div>
+                    <span class="uppercase tracking-[0.35em] text-[#B8860B] text-sm font-semibold">
+                        Luxury Jewelry
+                    </span>
+
+                    <h1 class="font-serif text-6xl lg:text-7xl leading-[1.05] text-[#3D2B2B] mt-6">
+                        TIMELESS <br>
+                        <span class="text-[#B8860B]">
+                            ELEGANCE
+                        </span>
+                        <br>
+                        FOR EVERY WOMAN
+                    </h1>
+
+                    <p class="mt-8 text-lg text-[#6E5B55] leading-8 max-w-lg">
+                        Discover handcrafted gold jewelry designed with luxurious
+                        details and timeless beauty to celebrate every unforgettable
+                        moment.
+                    </p>
+
+                    <div class="flex gap-5 mt-10">
+                        <button
+                            class="bg-[#B8860B] hover:bg-[#96720D] duration-300 text-white px-10 py-4 rounded-full uppercase tracking-widest shadow-xl">
+                            Discover Collection
+                        </button>
+
+                        <button
+                            class="border border-[#B8860B] px-10 py-4 rounded-full uppercase tracking-widest hover:bg-[#B8860B] hover:text-white duration-300">
+                            SHOP Now
+                        </button>
+                    </div>
+
+                    <!-- Statistics -->
+
+                    <div class="flex gap-12 mt-16">
+
+                        <div>
+
+                            <h2 class="font-serif text-5xl text-[#B8860B]">
+                                15K+
+                            </h2>
+
+                            <p class="uppercase text-xs tracking-wider text-gray-500">
+
+                                Happy Clients
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <h2 class="font-serif text-5xl text-[#B8860B]">
+                                30+
+                            </h2>
+
+                            <p class="uppercase text-xs tracking-wider text-gray-500">
+
+                                Collections
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <h2 class="font-serif text-5xl text-[#B8860B]">
+                                100%
+
+                            </h2>
+
+                            <p class="uppercase text-xs tracking-wider text-gray-500">
+
+                                Authentic
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Image -->
+
+                <div class="relative flex justify-center">
+
+                    <!-- Glow -->
+                    <div class="absolute w-[420px] h-[420px] bg-[#D4AF37]/10 rounded-full blur-[90px]">
+                    </div>
+
+                    <!-- Image -->
+                    <img src="images/Hero.jpg"
+                        class="relative z-10 w-full max-w-[560px] h-[650px] object-top rounded-tr-[100px] rounded-bl-[100px] shadow-[0_25px_60px_rgba(0,0,0,.18)] transition duration-500 hover:scale-[1.02]">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-white">
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3">
+
+            <!-- Feature 1 -->
+            <div
+                class="group flex flex-col items-center text-center px-10 py-10 border-b md:border-b-0 md:border-r border-[#e9dfcf]">
+
+                <div
+                    class="w-24 h-24 rounded-full border border-[#D4AF37] flex items-center justify-center mb-6 transition-all duration-500 group-hover:bg-[#B8860B] group-hover:scale-110">
+
+                    <i class="fa-solid fa-gem text-3xl text-[#B8860B] group-hover:text-white transition">
+                    </i>
+
+                </div>
+
+                <h3 class="font-serif text-2xl mb-3 text-[#4A2B2B]">
+
+                    Authentic Gold
+
+                </h3>
+
+                <p class="text-[#666] leading-7 max-w-xs">
+
+                    Every piece is crafted from certified 18K & 21K gold with exceptional quality.
+
+                </p>
+
+            </div>
+
+            <!-- Feature 2 -->
+
+            <div
+                class="group flex flex-col items-center text-center px-10 py-10 border-b md:border-b-0 md:border-r border-[#e9dfcf]">
+
+                <div
+                    class="w-24 h-24 rounded-full border border-[#D4AF37] flex items-center justify-center mb-6 transition-all duration-500 group-hover:bg-[#B8860B] group-hover:scale-110">
+
+                    <i class="fa-solid fa-truck-fast text-3xl text-[#B8860B] group-hover:text-white transition">
+                    </i>
+
+                </div>
+
+                <h3 class="font-serif text-2xl mb-3 text-[#4A2B2B]">
+
+                    Fast Delivery
+
+                </h3>
+
+                <p class="text-[#666] leading-7 max-w-xs">
+
+                    Secure shipping with elegant packaging delivered safely to your doorstep.
+
+                </p>
+
+            </div>
+
+            <!-- Feature 3 -->
+
+            <div class="group flex flex-col items-center text-center px-10 py-10">
+
+                <div
+                    class="w-24 h-24 rounded-full border border-[#D4AF37] flex items-center justify-center mb-6 transition-all duration-500 group-hover:bg-[#B8860B] group-hover:scale-110">
+
+                    <i class="fa-solid fa-shield-halved text-3xl text-[#B8860B] group-hover:text-white transition">
+                    </i>
+
+                </div>
+
+                <h3 class="font-serif text-2xl mb-3 text-[#4A2B2B]">
+
+                    Lifetime Warranty
+
+                </h3>
+
+                <p class="text-[#666] leading-7 max-w-xs">
+
+                    Enjoy complete confidence with our lifetime warranty and dedicated customer care.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Collections Section -->
+    <section class="bg-[#FCFAF6] py-16">
+
+        <!-- Title -->
+
+        <div class="text-center mb-16">
+
+            <span class="uppercase tracking-[0.35em] text-[#B8860B] text-sm">
+                Discover Luxury
+            </span>
+
+            <h2 class="font-serif text-5xl mt-4 text-[#4A2B2B]">
+                Explore Our Collections
+            </h2>
+
+            <div class="w-24 h-[2px] bg-[#B8860B] mx-auto mt-6"></div>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
+
+            <!-- Card 1 -->
+
+            <div class="relative overflow-hidden rounded-[35px] group cursor-pointer shadow-lg">
+
+                <img src="images/collection1.jpg"
+                    class="w-full h-[300px] object-cover transition duration-700 group-hover:scale-110">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80">
+                </div>
+
+                <div class="absolute bottom-10 left-8 transition-all duration-500 group-hover:bottom-20">
+
+                    <h3 class="text-white font-serif text-3xl mb-3">
+
+                        Necklaces
+
+                    </h3>
+
+                    <a href="#"
+                        class="opacity-0 group-hover:opacity-100 transition duration-500 inline-flex items-center gap-2 text-[#D4AF37] tracking-widest uppercase text-sm">
+
+                        Shop Collection
+
+                        <i class="fa-solid fa-arrow-right-long"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="relative overflow-hidden rounded-[35px] group cursor-pointer shadow-lg">
+
+                <img src="images/collection2.jpg"
+                    class="w-full h-[300px] object-cover transition duration-700 group-hover:scale-110">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80">
+                </div>
+
+                <div class="absolute bottom-10 left-8 transition-all duration-500 group-hover:bottom-20">
+
+                    <h3 class="text-white font-serif text-3xl mb-3">
+
+                        Rings
+
+                    </h3>
+
+                    <a href="#"
+                        class="opacity-0 group-hover:opacity-100 transition duration-500 inline-flex items-center gap-2 text-[#D4AF37] tracking-widest uppercase text-sm">
+
+                        Shop Collection
+
+                        <i class="fa-solid fa-arrow-right-long"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="relative overflow-hidden rounded-[35px] group cursor-pointer shadow-lg">
+
+                <img src="images/collection3.jpg"
+                    class="w-full h-[300px] object-cover transition duration-700 group-hover:scale-110">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80">
+                </div>
+
+                <div class="absolute bottom-10 left-8 transition-all duration-500 group-hover:bottom-20">
+
+                    <h3 class="text-white font-serif text-3xl mb-3">
+
+                        Earrings
+
+                    </h3>
+
+                    <a href="#"
+                        class="opacity-0 group-hover:opacity-100 transition duration-500 inline-flex items-center gap-2 text-[#D4AF37] tracking-widest uppercase text-sm">
+
+                        Shop Collection
+
+                        <i class="fa-solid fa-arrow-right-long"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="relative overflow-hidden rounded-[35px] group cursor-pointer shadow-lg">
+
+                <img src="images/collection4.jpg"
+                    class="w-full h-[300px] object-cover transition duration-700 group-hover:scale-110">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80">
+                </div>
+
+                <div class="absolute bottom-10 left-8 transition-all duration-500 group-hover:bottom-20">
+
+                    <h3 class="text-white font-serif text-3xl mb-3">
+
+                        Half Sets
+
+                    </h3>
+
+                    <a href="#"
+                        class="opacity-0 group-hover:opacity-100 transition duration-500 inline-flex items-center gap-2 text-[#D4AF37] tracking-widest uppercase text-sm">
+
+                        Shop Collection
+
+                        <i class="fa-solid fa-arrow-right-long"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Best Seller -->
+    <section class="px-6 py-10 bg-[#FDFBF6]">
+        <div class="flex items-center justify-center gap-4 mb-12">
+            <div class="flex-1 max-w-[150px] h-[1px] bg-[#B8860B]/40 relative">
+                <span class="absolute -right-1 -top-1 text-[8px] text-[#B8860B]">◆</span>
+            </div>
+            <h2 class="font-serif text-2xl text-[#4A2B2B] uppercase tracking-[0.2em] font-medium">BEST SELLERS</h2>
+            <div class="flex-1 max-w-[150px] h-[1px] bg-[#B8860B]/40 relative">
+                <span class="absolute -left-1 -top-1 text-[8px] text-[#B8860B]">◆</span>
+            </div>
+        </div>
+
+        <div id="bestSellerContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+
+        </div>
+    </section>
+
+
+    <!-- Reviews-->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-[#D4AF37] uppercase tracking-widest text-sm mb-2">Testimonials</p>
+                <h2 class="text-4xl font-serif text-[#4A3728]">What Our Clients Say</h2>
+                <div class="w-20 h-0.5 bg-[#D4AF37] mx-auto mt-4"></div>
+            </div>
+
+            <!-- Grid container -->
+            <div id="reviewsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Instgram-->
+    <section class="py-12">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-serif text-[#4A3728]">Follow Us on Instagram</h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-2">
+
+            <div class="aspect-square bg-gray-200 overflow-hidden">
+                <img src="images/img5.jpg" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            </div>
+            <div class="aspect-square bg-gray-200 overflow-hidden">
+                <img src="images/img6.jpg" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            </div>
+            <div class="aspect-square bg-gray-200 overflow-hidden">
+                <img src="images/img7.jpg" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            </div>
+            <div class="aspect-square bg-gray-200 overflow-hidden">
+                <img src="images/img8.jpg" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- NewsLetter-->
+    <section class="bg-[#FDFBF7] py-16 px-4 text-center border-t border-b border-[#D4AF37]/20">
+        <div class="max-w-2xl mx-auto">
+            <h3 class="text-2xl font-serif text-[#4A3728] mb-4">JOIN THE KINGGOLD FAMILY</h3>
+            <p class="text-gray-600 mb-8 text-sm">
+                Subscribe and be the first to know about new collections, exclusive offers and special events.
+            </p>
+
+            <!-- نموذج الاشتراك -->
+            <div class="flex flex-col sm:flex-row gap-2">
+                <input type="email" placeholder="Enter your email address"
+                    class="flex-1 p-3 border border-gray-300 rounded focus:outline-none focus:border-[#D4AF37]">
+                <button class=" bg-[#B8860B] text-white px-8 py-3 rounded hover:bg-[#D4AF37] transition duration-300">
+                    SUBSCRIBE
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#FDFBF7] pt-16 pb-8 px-4 border-t border-[#D4AF37]/20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+
+            <div class="space-y-4">
+                <h2 class="text-2xl font-serif font-bold text-[#4A3728]">AURUM Atelier</h2>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Timeless jewelry crafted with passion, elegance, and premium gold for unforgettable moments.
+                </p>
+                <i class="fas fa-search"></i>
+                <i class="far fa-heart"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-[#4A3728] mb-4">SHOP</h4>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="#" class="hover:text-[#D4AF37]">All Collections</a></li>
+                    <li><a href="#" class="hover:text-[#D4AF37]">Rings</a></li>
+                    <li><a href="#" class="hover:text-[#D4AF37]">Necklaces</a></li>
+                    <li><a href="#" class="hover:text-[#D4AF37]">Bracelets</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-[#4A3728] mb-4">SUPPORT</h4>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="#" class="hover:text-[#D4AF37]">Help Center</a></li>
+                    <li><a href="#" class="hover:text-[#D4AF37]">Shipping & Delivery</a></li>
+                    <li><a href="#" class="hover:text-[#D4AF37]">Returns</a></li>
+                    <li><a href="#" class="hover:text-[#D4AF37]">Warranty</a></li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h4 class="font-bold text-[#4A3728] mb-4">CONTACT</h4>
+                <p class="text-sm text-gray-600 mb-2">122 Gold Street, Cairo, Egypt</p>
+                <p class="text-sm text-gray-600">+20 111 222 3333</p>
+                <p class="text-sm text-gray-600">hello@kinggold.com</p>
+            </div>
+        </div>
+
+
+        <div class="text-center mt-12 pt-8 border-t border-gray-200 text-sm text-gray-500">
+            © 2026 AURUM Atelier. All Rights Reserved.
+        </div>
+    </footer>
+
+
+    <script src="src/data.js"></script>
+    <script src="src/script.js"></script>
+</body>
+
+</html>
