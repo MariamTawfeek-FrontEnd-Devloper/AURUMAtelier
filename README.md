@@ -14,7 +14,7 @@ Welcome to the Aurum Atelier portfolio project! This is a modern, responsive web
 - **Tailwind CSS**
 
 ## 🌐 Live Demo
-[Link to your GitHub Pages URL here]
+https://mariamtawfeek-frontend-devloper.github.io/AURUMAtelier/
 
 ## 💡 About
 This project was developed as part of a professional front-end development portfolio, focusing on writing clean, bug-free, and scalable code.
