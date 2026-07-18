@@ -4,7 +4,7 @@ const products = [
         id:"1",
         name: "18K Gold North Star Zircon Pinky Ring",
         price: "LE 15,265",
-        image: "../images/img1.jpg",
+        image: "../../images/img1.jpg",
         rating: "★★★★",
         storeAmount: "(15)",
         brand: "Pinky Ring"
@@ -13,7 +13,7 @@ const products = [
         id:"2",
         name: "18K Gold Hammered Texture Band Ring",
         price: "LE 8,135",
-        image: "../images/img1.jpg",
+        image: "../../images/img1.jpg",
         rating: "★★★★",
         storeAmount: "(14)",
         brand: "Ring Band"
@@ -23,7 +23,7 @@ const products = [
         id:"3",
         name: "18K Gold Celestial North Star Pinky Ring",
         price: "LE 10,295",
-        image: "../images/img1.jpg",
+        image: "../../images/img1.jpg",
         rating: "★★★★★",
         storeAmount: "(60)",
         brand: "Texture Band"
@@ -32,7 +32,7 @@ const products = [
         id:"4",
         name: "18K Partial Hammered Texture Band",
         price: "LE 6,145",
-        image: "../images/img1.jpg",
+        image: "../../images/img1.jpg",
         rating: "★★★",
         storeAmount: "(35)",
         brand: "Ring Band"
